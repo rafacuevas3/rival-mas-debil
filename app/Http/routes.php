@@ -10,8 +10,11 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+use App\Resultado as Resultado;
 
 Route::get('/', 'JuegoController@index');
+Route::get('/ronda_final', 'JuegoController@ronda_final');
+
 
 Route::get('home', 'HomeController@index');
 
@@ -19,3 +22,8 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::get('json_puntaje/{points}/{round}', function($points, $round){
+	$resultado = Resultado::create(['ronda' => $round , 'puntos' => $points]);
+	return 'Hecho';
+});
