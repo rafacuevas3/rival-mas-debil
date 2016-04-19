@@ -1,6 +1,7 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
+	"name": "rafacuevas3/rival-mas-debil",
+	"autor": "Rafael Cuevas",
+	"description": "Rival mas debil",
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"type": "project",
